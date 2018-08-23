@@ -9,7 +9,7 @@ But a launcher's job is only to launch mods - that's it. This is why Mariya was 
 
 ## History
 
-Mariya is a indev project forked birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for me).
+Mariya is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for me).
 
 Mariya aims to do the following:
 
