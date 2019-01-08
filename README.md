@@ -10,7 +10,7 @@ This project is named such because we try to encompass the values of Alcantara i
 
 ## History
 
-Alcantara is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for me).
+Alcantara is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for other people).
 
 Alcantara aims to do the following:
 
