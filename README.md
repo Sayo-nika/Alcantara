@@ -14,7 +14,7 @@ You require the following:
 
 - Clang
 - GFLW
-- [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `/usr/bin`.
+- [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `/usr/lib`.
 
 Once prerequisites are set, run `make`. Currently Linux is supported.
 
