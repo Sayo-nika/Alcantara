@@ -1,17 +1,18 @@
-# Mariya
-yet another DDLC mod launcher
+# Alcantara
 
-## But why another?
+Alcantara is a experimental DDLC Launcher using Dart and Google's Flutter to achieve a refined and optimized application for managing DDLC Mods.
 
-I always think the current launchers like Doki Doki Mod Launcher, fDDME, and DDMM were too bloated and had a large codebase.
+## Why Alcantara?
 
-But a launcher's job is only to launch mods - that's it. This is why Mariya was created: to create a more minimal experience take on Mod Launcher design.
+Alcantara has always been a symbol of luxury, you can find the Italian fabric in Microsoft Surface, luxury cars, for its durability, exquisite texture, and stain-free properties.
+
+This project is named such because we try to encompass the values of Alcantara in a DDLC Launcher.
 
 ## History
 
-Mariya is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for me).
+Alcantara is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for me).
 
-Mariya aims to do the following:
+Alcantara aims to do the following:
 
 - Provide a sandbox instance for DDLC Mods by providing a stand-alone bundle of DDLC with the mod by grabbing the DDLC installation from Steam or your local HDD if not found.
 
@@ -21,16 +22,14 @@ Mariya aims to do the following:
 
 ## Technical details
 
-Mariya uses the minimal [Photon](http://photonkit.com/) UI Framework to build its UI, thereby removing our dependency to UI frameworks like React and Angular *which is notoriously large as hell*.
+Alcantara will be using the [Flutter Framework](https://flutter.io) with Desktop Embedding support. Since Desktop embedding is experimental, it will be instrumental for us to use Flutter to provide feedback on the desktop embedding and Flutter itself.
 
-The real beauty of Mariya however, is the backend. We strive to use **NO DEPENDENCIES** as possible. It's always been a misconception in Node.js development you'd need a large library to only use one function. We believe that's dirty as hell and that practice should be avoided.
-
-We maximize the use of all known natively supported ECMAScript 6 syntax available to be used at Node.js, thereby removing the need for us to use another lang like TypeScript, contrary to our larger project Sayonika.
+We use [Dart](https://dartlang.org), which has been in consideration because of the size issues we're encountering with Node.js based applications that uses Electron. We hope Flutter+Dart can provide us performance that neither Electron or Node.js can offer.
 
 ## Copyright
 
-Mariya is licensed under GNU Affero General Public License 3.0 under The Sayonika Project Authors.
+Alcantara is licensed under GNU Affero General Public License 3.0 under The Sayonika Project Authors.
 
-Mariya is a Sayonika Project. Sayonika, The Sayonika Logo, The Sayonika Mascot are trademarks of The Sayonika Project. Portions of the project is licensed under Creative Commons 3.0 Non-Commercial Unported.
+Alcantara is a Sayonika Project. Sayonika, The Sayonika Logo, The Sayonika Mascot are trademarks of The Sayonika Project. Portions of the project is licensed under Creative Commons 3.0 Non-Commercial Unported.
 
-The Sayonika Project and Mariya is not affiliated with Team Salvato.
+The Sayonika Project and Alcantara is not affiliated with Team Salvato.
