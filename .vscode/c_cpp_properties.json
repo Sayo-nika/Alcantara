@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/flutter_desktop_embedding"
+                "/usr/lib/flutter_desktop_embedding/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
