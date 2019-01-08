@@ -8,23 +8,15 @@ Alcantara has always been a symbol of luxury, you can find the Italian fabric in
 
 This project is named such because we try to encompass the values of Alcantara in a DDLC Launcher.
 
-## History
+## Building
 
-Alcantara is a indev project birthed from fDDME in hopes I can make the code understandable to myself (which in most cases, also readable for other people).
+You require the following:
 
-Alcantara aims to do the following:
+- Clang
+- GFLW
+- [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `/usr/bin`.
 
-- Provide a sandbox instance for DDLC Mods by providing a stand-alone bundle of DDLC with the mod by grabbing the DDLC installation from Steam or your local HDD if not found.
-
-- Reinvent how Mod Launcher design is supposed to be: Minimal with no gotchas and tricky SDKs to use with.
-
-- To showcase that you can build launchers practically more with less code.
-
-## Technical details
-
-Alcantara will be using the [Flutter Framework](https://flutter.io) with Desktop Embedding support. Since Desktop embedding is experimental, it will be instrumental for us to use Flutter to provide feedback on the desktop embedding and Flutter itself.
-
-We use [Dart](https://dartlang.org), which has been in consideration because of the size issues we're encountering with Node.js based applications that uses Electron. We hope Flutter+Dart can provide us performance that neither Electron or Node.js can offer.
+Once prerequisites are set, run `make`. Currently Linux is supported.
 
 ## Copyright
 
