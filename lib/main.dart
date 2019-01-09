@@ -52,6 +52,14 @@ void _initDB()
   final String dbPath = null;
   getDatabasesPath().then((path) => dbPath);
 
+  // just to make sure it gets created and doesn't error out when open is called.
+  final checkDir = new Directory("$dbPath");
+
+  if(!checkDir.existsSync())
+  {
+    checkDir.createSync();
+  }
+
   Future open(DBProvider dbProvider) => dbProvider.open("$dbPath/alcantara_data");
   open(DBProvider()).catchError((err) => throw Error());
 }
