@@ -11,7 +11,6 @@ import "package:sqflite/sqflite.dart";
 // table names for shit
 final modsTable = "mods";
 final columnTitle = "title";
-final columnFromFirstParty = "first_party_provided";
 final columnSyAuthor = "sayonika_author";
 final columnSyModId = "sayonika_id";
 final columnSyURL = "sayonika_mod_url";
@@ -80,7 +79,7 @@ class DBProvider
     entry.id = await db.insert(modsTable, entry.toMap());
     return entry;
   }
-  
+
   Future<LocalModEntry> getEntry(String title) async 
   {
     final List<Map> maps = await db.query(modsTable,
