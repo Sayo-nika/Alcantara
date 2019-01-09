@@ -62,7 +62,7 @@ ALL_LIBS_OUT=$(foreach lib,$(ALL_LIBS),$(OUT_LIB_DIR)/$(notdir $(lib)))
 # Overrides for the optional GN build.
 ifdef USE_GN
 GN_OUT_DIR=$(PROJECT_ROOT)/out
-# Use GN's out dir even though this isn't a GN build, to group build output.
+# Use GNs out dir even though this isnt a GN build, to group build output.
 OUT_DIR=$(GN_OUT_DIR)/example
 
 # The GN build places all libraries at the top level of the output directory.
@@ -74,7 +74,7 @@ PLUGIN_LIBS=$(foreach plugin,$(PLUGIN_NAMES)\
 # The GN build places all published headers in a top-level include/.
 INCLUDE_DIRS=$(GN_OUT_DIR)/include
 
-# Override LIBRARY_DIRS since it's used for controlling the external build.
+# Override LIBRARY_DIRS since its used for controlling the external build.
 LIBRARY_DIRS=$(GN_OUT_DIR)
 
 # Additional tools
@@ -124,12 +124,12 @@ $(LIBRARY_DIRS):
 
 # Enforce relative ordering. This prevents accidentally building the targets
 # in parallel in the event that someone supplies the -j flag to `make`.
-# TODO: Fix this in the plugin builds so that it's not necessary at this layer.
+# TODO: Fix this in the plugin builds so that its not necessary at this layer.
 $(PLUGIN_DIRS): $(FLUTTER_EMBEDDER_LIB_DIR)
 endif
 
 # Require that all the library builds run for anything depending on the
-# libraries, but use order-only so that the phony build targets don't trigger
+# libraries, but use order-only so that the phony build targets dont trigger
 # rebuilds of all dependencies every time.
 $(ALL_LIBS): | $(LIBRARY_DIRS)
 
@@ -152,8 +152,8 @@ bundleflutterassets: $(FLUTTER_ASSETS_SOURCE)
 	mkdir -p $(OUT_DATA_DIR)
 	rsync -rpu --delete $(FLUTTER_ASSETS_SOURCE) $(OUT_DATA_DIR)
 
-# PHONY since the Makefile doesn't have all the dependency information necessary
-# to know if 'build bundle' needs to be re-run.
+# PHONY since the Makefile doesnt have all the dependency information necessary
+# to know if build bundle needs to be re-run.
 .PHONY: $(FLUTTER_ASSETS_SOURCE)
 $(FLUTTER_ASSETS_SOURCE):
 	$(BUILD_ASSETS_BIN) $(FLUTTER_APP_DIR)

@@ -1,8 +1,8 @@
-import 'dart:io';
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart'
+import "dart:io";
+import "package:flutter/material.dart";
+import "package:flutter/foundation.dart"
   show debugDefaultTargetPlatformOverride;
-import 'package:alcantara/home_view.dart';
+import "package:alcantara/home_view.dart";
 
 // Sets the Target Platform Overrides
 // Needed for Dynamic App Behavior for Flutter 
