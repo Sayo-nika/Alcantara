@@ -52,6 +52,6 @@ void _initDB()
   final String dbPath = null;
   getDatabasesPath().then((path) => dbPath);
 
-  Future open(DBProvider dbProvider) => dbProvider.open(dbPath);
+  Future open(DBProvider dbProvider) => dbProvider.open("$dbPath/alcantara_data");
   open(DBProvider());
 }
