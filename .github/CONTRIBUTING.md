@@ -23,6 +23,10 @@ void uwu()
  // Newline Braces   
 }
 ```
+## Variable Naming
+
+Alcantara uses UpperCamelCase to be consistent with Flutter's definition names. snake_case is not allowed by headlessCamelCase is allowed too. 
+
 ## Linting
 
 Additional repository coding styles are enforced by the Linter. Make sure to run `dartfmt` regularly.
