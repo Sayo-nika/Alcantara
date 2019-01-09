@@ -4,15 +4,6 @@ import 'package:flutter/foundation.dart'
   show debugDefaultTargetPlatformOverride;
 import 'package:alcantara/homeView.dart';
 
-void main()
-{
-  _setTargetPlatform();
-  runApp(MaterialApp(
-    title: "Alcantara by Sayonika",
-    home: AlcantaraHomeView()
-  ));
-}
-
 // Sets the Target Platform Overrides
 // Needed for Dynamic App Behavior for Flutter 
 // See: https://github.com/google/flutter-desktop-embedding/blob/master/Flutter-Requirements.md
@@ -33,4 +24,13 @@ void _setTargetPlatform()
   {
     debugDefaultTargetPlatformOverride = targetPlatform;
   }
+}
+
+void main()
+{
+  _setTargetPlatform();
+  runApp(MaterialApp(
+    title: "Alcantara by Sayonika",
+    home: AlcantaraHomeView()
+  ));
 }
