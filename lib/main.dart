@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart'
   show debugDefaultTargetPlatformOverride;
-import 'package:alcantara/settingsView.dart';
 import 'package:alcantara/homeView.dart';
 
 void main()
