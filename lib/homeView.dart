@@ -7,6 +7,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:alcantara/settingsView.dart';
 
 class AlcantaraHomeView extends StatelessWidget
 {
@@ -19,7 +20,39 @@ class AlcantaraHomeView extends StatelessWidget
       ),
       body: Center(
         child: Text("Work In Progress!")
-      )
+      ),
+
+      drawer: Drawer(
+        elevation: 3,
+        child: ListView(
+           padding: EdgeInsets.zero,
+           children: <Widget>[
+             DrawerHeader(
+               child: Text("Alcantara Pre-Alpha"),
+               decoration: BoxDecoration(
+                 image: DecorationImage(image: AssetImage("bg/s1.png"))
+               )
+             ),
+             ListTile(
+               title: Text("Settings"),
+               onTap: () {
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => AlcantaraSettingsView()));
+               },
+             )
+           ]
+         )
+        ),
+
+      floatingActionButton: FloatingActionButton(
+        // do nothing, prototype design for now!
+        // Plus the fact I'm the only one doing it
+        // so this is probably gonna be forgotten again >////<
+        onPressed: null,
+        tooltip: "Add Mod",
+        child: Icon(Icons.add)
+      ),
+
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

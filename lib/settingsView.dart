@@ -15,11 +15,12 @@ class AlcantaraSettingsView extends StatelessWidget
     return Scaffold(
       appBar: AppBar(
         title: Text("Alcantara Settings"),
-        backgroundColor: Colors.red[400]
+        backgroundColor: Colors.red[400],
       ),
+
       body: Center(
         child: Text("Work in progress!"),
-      )
+      ),
     );
   }
 }
