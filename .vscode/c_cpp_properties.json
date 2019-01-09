@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/flutter-desktop-embedding/**",
+                "~/.local/lib/flutter-desktop-embedding/**",
                 "/usr/include",
                 "/usr/local/include"
             ],
