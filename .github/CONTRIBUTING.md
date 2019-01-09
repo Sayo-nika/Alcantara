@@ -25,7 +25,7 @@ void uwu()
 ```
 ## Variable Naming
 
-Alcantara uses UpperCamelCase to be consistent with Flutter's definition names. snake_case is not allowed by headlessCamelCase is allowed too. 
+Alcantara uses UpperCamelCase to be consistent with Flutter's definition names. snake_case is not allowed but headlessCamelCase is allowed (only for variables, class names has to be UpperCamelCase).
 
 ## Linting
 
