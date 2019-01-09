@@ -53,5 +53,5 @@ void _initDB()
   getDatabasesPath().then((path) => dbPath);
 
   Future open(DBProvider dbProvider) => dbProvider.open("$dbPath/alcantara_data");
-  open(DBProvider());
+  open(DBProvider()).catchError((err) => throw Error());
 }
