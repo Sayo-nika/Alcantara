@@ -14,6 +14,7 @@ You require the following:
 
 - Clang
 - GFLW
+- [Dart SDK](https://dartlang.org)
 - [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `/usr/lib`.
 
 Once prerequisites are set, run `make`. Currently Linux is supported.
