@@ -1,25 +1,24 @@
 /**
  * Copyright 2019 (c) The Sayonika Project Authors
  * 
- * Licensed under GNU Affero GPL v3. You should have recieved a copy of the License with the source code.
+ * Licensed under GNU Affero GPL v3. 
+ * You should have recieved a copy of the License with the source code.
  * if not, god be with ye.
  */
 
 
 import 'package:flutter/material.dart';
-import 'package:alcantara/settingsView.dart';
+import 'package:alcantara/settings_view.dart';
 
 class AlcantaraHomeView extends StatelessWidget
 {
   @override
-  Widget build(BuildContext context)
-  {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+  Widget build(BuildContext context) => Scaffold (
+      appBar: AppBar (
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 0),
       ),
-      body: Center(
-        child: Text("Work In Progress!")
+      body: Center (
+        child: const Text("Work In Progress!")
       ),
 
       drawer: Drawer(
@@ -27,14 +26,14 @@ class AlcantaraHomeView extends StatelessWidget
         child: ListView(
            padding: EdgeInsets.zero,
            children: <Widget>[
-             DrawerHeader(
-               child: Text("Alcantara Pre-Alpha"),
+             DrawerHeader (
+               child: const Text("Alcantara Pre-Alpha"),
                decoration: BoxDecoration(
-                 image: DecorationImage(image: AssetImage("bg/s1.png"))
+                 image: DecorationImage(image: const AssetImage("bg/s1.png"))
                )
              ),
-             ListTile(
-               title: Text("Settings"),
+             ListTile (
+               title: const Text("Settings"),
                onTap: () {
                  Navigator.push(context, MaterialPageRoute(builder: (context) => AlcantaraSettingsView()));
                },
@@ -43,16 +42,15 @@ class AlcantaraHomeView extends StatelessWidget
          )
         ),
 
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton (
         // do nothing, prototype design for now!
         // Plus the fact I'm the only one doing it
         // so this is probably gonna be forgotten again >////<
         onPressed: null,
         tooltip: "Add Mod",
-        child: Icon(Icons.add)
+        child: const Icon(Icons.add)
       ),
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
-  }
 }

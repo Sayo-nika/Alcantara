@@ -10,17 +10,14 @@ import 'package:flutter/material.dart';
 class AlcantaraSettingsView extends StatelessWidget
 {
   @override
-  Widget build(BuildContext context)
-  {
-    return Scaffold(
+  Widget build(BuildContext context) => Scaffold (
       appBar: AppBar(
-        title: Text("Alcantara Settings"),
+        title: const Text("Alcantara Settings"),
         backgroundColor: Colors.red[400],
       ),
 
       body: Center(
-        child: Text("Work in progress!"),
-      ),
+        child: const Text("Work in progress!"),
+      )
     );
-  }
 }
