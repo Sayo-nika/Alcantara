@@ -1,8 +1,19 @@
+/**
+ * Copyright 2019 (c) The Sayonika Project Authors
+ * 
+ * Licensed under GNU Affero GPL v3. 
+ * You should have recieved a copy of the License with the source code.
+ * if not, god be with ye.
+ */
+
+import "dart:async" show Future;
 import "dart:io";
 import "package:flutter/material.dart";
 import "package:flutter/foundation.dart"
   show debugDefaultTargetPlatformOverride;
 import "package:alcantara/home_view.dart";
+import "package:sqflite/sqflite.dart";
+import "package:alcantara/utils/db_provider.dart";
 
 // Sets the Target Platform Overrides
 // Needed for Dynamic App Behavior for Flutter 
@@ -28,9 +39,19 @@ void _setTargetPlatform()
 
 void main()
 {
+  _initDB();
   _setTargetPlatform();
-  runApp(MaterialApp(
+  runApp(MaterialApp (
     title: "Alcantara by Sayonika",
     home: AlcantaraHomeView()
   ));
+}
+
+void _initDB()
+{
+  final String dbPath = null;
+  getDatabasesPath().then((path) => dbPath);
+
+  Future open(DBProvider dbProvider) => dbProvider.open(dbPath);
+  open(DBProvider());
 }

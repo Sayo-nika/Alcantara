@@ -93,6 +93,12 @@ class DBProvider
     return null;
   }
 
+  Future<List<Map<String,dynamic>>> getAllEntries() async
+  {
+    final List<Map<String, dynamic>> records = await db.query(modsTable);
+    return records;
+  }
+
   Future<int> delete(String title) async =>
     db.delete(modsTable, where: '$columnTitle = ?', whereArgs: [title]);
 

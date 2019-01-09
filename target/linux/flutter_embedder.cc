@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
 #endif
   // Start the engine.
   auto window = flutter_desktop_embedding::CreateFlutterWindowInSnapshotMode(
-      640, 480, assets_path, icu_data_path, arguments);
+      800, 600, assets_path, icu_data_path, arguments);
   if (window == nullptr) {
     flutter_desktop_embedding::FlutterTerminate();
     return EXIT_FAILURE;
