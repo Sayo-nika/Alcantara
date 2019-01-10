@@ -1,6 +1,3 @@
-import "dart:async";
-import "package:alcantara/utils/db_provider.dart";
-
 /**
  * Copyright 2019 (c) The Sayonika Project Authors
  * 
@@ -8,6 +5,9 @@ import "package:alcantara/utils/db_provider.dart";
  * You should have recieved a copy of the License with the source code.
  * if not, god be with ye.
  */
+
+import "dart:async";
+import "package:alcantara/utils/db_provider.dart";
 import "package:flutter/foundation.dart";
 
 class Mod
