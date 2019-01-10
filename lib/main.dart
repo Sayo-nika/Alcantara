@@ -47,10 +47,10 @@ void main()
   ));
 }
 
-void _initDB()
+void _initDB() async
 {
   var dbPath;
-  getDatabasesPath().then((path) => dbPath = path);
+  await getDatabasesPath().then((path) => dbPath = path);
 
   // just to make sure it gets created and doesn't error out when open is called.
   final checkDir = new Directory("$dbPath");
@@ -61,5 +61,5 @@ void _initDB()
   }
 
   Future open(DBProvider dbProvider) => dbProvider.open("$dbPath/alcantara_data");
-  open(DBProvider()).catchError((err) => throw Error());
+  await open(DBProvider()).catchError((err) => throw Error());
 }
