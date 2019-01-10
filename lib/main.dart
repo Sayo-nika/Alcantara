@@ -49,8 +49,8 @@ void main()
 
 void _initDB()
 {
-  final String dbPath = null;
-  getDatabasesPath().then((path) => dbPath);
+  var dbPath;
+  getDatabasesPath().then((path) => dbPath = path);
 
   // just to make sure it gets created and doesn't error out when open is called.
   final checkDir = new Directory("$dbPath");
