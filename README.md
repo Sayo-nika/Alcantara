@@ -17,8 +17,8 @@ You require the following:
 - Development libraries installed
      - `libepoxy` / `libepoxy-devel`
      - `jsoncpp-dev` / `jsoncpp-devel`
-     - `libgtk3-dev`
-     - `pkg-config`
+     - `libgtk-3-dev`/ `gtk3-devel`
+     - `pkg-config` / `pkgconfig`
      - `libglfw3-dev` / `glfw-devel`
 - [Dart SDK](https://dartlang.org)
 - [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `$HOME/.local/lib`
