@@ -15,11 +15,11 @@ You require the following:
 - Clang
 - Automake
 - Development libraries installed
-     - `libepoxy`
-     - `jsoncpp`
+     - `libepoxy` / `libepoxy-devel`
+     - `jsoncpp-dev` / `jsoncpp-devel`
      - `libgtk3-dev`
      - `pkg-config`
-     - `libglfw3-dev`
+     - `libglfw3-dev` / `glfw-devel`
 - [Dart SDK](https://dartlang.org)
 - [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `$HOME/.local/lib`
 
