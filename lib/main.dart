@@ -26,7 +26,7 @@ void _setTargetPlatform()
   {
     targetPlatform = TargetPlatform.iOS;
   } 
-  else if (Platform.isWindows || Platform.isLinux || Platform.isFuchsia)
+  else
   {
     targetPlatform = TargetPlatform.android;
   }
