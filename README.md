@@ -32,3 +32,6 @@ Alcantara is licensed under GNU Affero General Public License 3.0 under The Sayo
 Alcantara is a Sayonika Project. Sayonika, The Sayonika Logo, The Sayonika Mascot are trademarks of The Sayonika Project. Portions of the project is licensed under Creative Commons 3.0 Non-Commercial Unported.
 
 The Sayonika Project and Alcantara is not affiliated with Team Salvato.
+
+This project is not affiliated in any way with Alcantara spA. If you may have stumbled from this project
+by accident finding what Alcantara is, [Wikipedia can help](https://en.wikipedia.org/wiki/Alcantara_(material)).
