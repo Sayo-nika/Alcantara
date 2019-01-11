@@ -55,7 +55,7 @@ OUT_DIR=$(CURDIR)/../out/linux
 OUT_DATA_DIR=$(OUT_DIR)/data
 OUT_LIB_DIR=$(OUT_DIR)/lib
 
-BIN_OUT=$(OUT_DIR)/alcantara_bin
+BIN_OUT=$(OUT_DIR)/alcantara
 ICU_DATA_OUT=$(OUT_DATA_DIR)/$(ICU_DATA_NAME)
 ALL_LIBS_OUT=$(foreach lib,$(ALL_LIBS),$(OUT_LIB_DIR)/$(notdir $(lib)))
 
