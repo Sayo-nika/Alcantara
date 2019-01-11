@@ -13,9 +13,15 @@ This project is named such because we try to encompass the values of Alcantara i
 You require the following:
 
 - Clang
-- GFLW
+- Automake
+- Development libraries installed
+     - `libepoxy`
+     - `jsoncpp`
+     - `libgtk3-dev`
+     - `pkg-config`
+     - `libglfw3-dev`
 - [Dart SDK](https://dartlang.org)
-- [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `/usr/lib`.
+- [Alcantara SDK](https://github.com/Sayo-nika/Alcantara-FlutterSDK) installed on your `$HOME/.local/lib`
 
 Once prerequisites are set, run `make`. Currently Linux is supported.
 

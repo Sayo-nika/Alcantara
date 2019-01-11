@@ -14,12 +14,12 @@
 
 # Dependency locations
 PROJECT_ROOT=$(CURDIR)/../..
-FLUTTER_EMBEDDER_LIB_DIR=$(PROJECT_ROOT)/target/linux
-FLUTTER_APP_DIR=$(PROJECT_ROOT)
-LIB_DIR=/usr/lib/flutter_desktop_embedding
+LIB_DIR=$$HOME/.local/lib/flutter-desktop-embedding
 PLUGINS_DIR=$(LIB_DIR)/plugins
 TOOLS_DIR=$(LIB_DIR)/tools
 FLUTTER_DIR=$(shell $(TOOLS_DIR)/flutter_location)
+FLUTTER_EMBEDDER_LIB_DIR=$(LIB_DIR)/library/linux
+FLUTTER_APP_DIR=$(PROJECT_ROOT)
 
 # Libraries
 FLUTTER_EMBEDDER_LIB_NAME=flutter_embedder
@@ -55,7 +55,7 @@ OUT_DIR=$(CURDIR)/out
 OUT_DATA_DIR=$(OUT_DIR)/data
 OUT_LIB_DIR=$(OUT_DIR)/lib
 
-BIN_OUT=$(OUT_DIR)/flutter_embedder_example
+BIN_OUT=$(PROJECT_ROOT)/dist/linux
 ICU_DATA_OUT=$(OUT_DATA_DIR)/$(ICU_DATA_NAME)
 ALL_LIBS_OUT=$(foreach lib,$(ALL_LIBS),$(OUT_LIB_DIR)/$(notdir $(lib)))
 
@@ -97,7 +97,7 @@ LDFLAGS=-L$(OUT_LIB_DIR) \
 	$(patsubst %,-l$(PLUGIN_LIB_NAME_PREFIX)%,$(PLUGIN_NAMES)) \
 	-Wl,-rpath=\$$ORIGIN/lib
 
-SOURCES=flutter_embedder_example.cc
+SOURCES=flutter_embedder.cc
 
 # Targets
 
