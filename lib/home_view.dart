@@ -17,7 +17,7 @@ class AlcantaraHomeView extends StatelessWidget
 @override
 Widget build(BuildContext context) => Scaffold (
     appBar: AppBar (
-      backgroundColor: const Color.fromRGBO(255, 255, 255, 0),
+      backgroundColor: Colors.red[400],
     ),
     body: Center (
       child: Expanded(
@@ -74,7 +74,7 @@ class PlaceholderWidget extends StatefulWidget
 
 class _PlaceholderWidgetState extends State<PlaceholderWidget>
 {
-  bool _hasMods = false;  
+  bool beActive = false;  
 
   PlaceholderWidget widget;
 
@@ -93,11 +93,11 @@ class _PlaceholderWidgetState extends State<PlaceholderWidget>
   {
     if (entries.length != 0)
     {
-      _hasMods = false;
+      beActive = false;
     }
     else
     {
-      _hasMods = true;
+      beActive = true;
     }
   }
 
