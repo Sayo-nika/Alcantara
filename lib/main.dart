@@ -61,5 +61,5 @@ void _initDB() async
   }
 
   Future open(DBProvider dbProvider) => dbProvider.open("$dbPath/alcantara_data");
-  await open(DBProvider()).catchError((err) => throw Error());
+  await open(DBProvider()).catchError(throw new Error());
 }

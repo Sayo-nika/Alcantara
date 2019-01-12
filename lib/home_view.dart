@@ -9,16 +9,10 @@
 
 import "package:flutter/material.dart";
 import "package:alcantara/settings_view.dart";
+import "package:alcantara/utils/db_provider.dart";
 
-class AlcantaraHomeView extends StatefulWidget
+class AlcantaraHomeView extends StatelessWidget
 {
-  AlcantaraHomeState createState() => AlcantaraHomeState(); 
-}
-
-class AlcantaraHomeState extends State<AlcantaraHomeView>
-{
-  // TODO(sr229): dynamically populate with cards from DB.
-}
 
 @override
 Widget build(BuildContext context) => Scaffold (
@@ -26,7 +20,13 @@ Widget build(BuildContext context) => Scaffold (
       backgroundColor: const Color.fromRGBO(255, 255, 255, 0),
     ),
     body: Center (
-      child: const Text("Work In Progress!")
+      child: Expanded(
+        child: ListView(
+          children: <Widget>[
+            PlaceholderWidget()
+          ],
+        ),
+      )
     ),
 
     drawer: Drawer(
@@ -61,3 +61,67 @@ Widget build(BuildContext context) => Scaffold (
 
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
   );
+}
+
+class PlaceholderWidget extends StatefulWidget
+{
+  _PlaceholderWidgetState _placeholderWidget;
+  @override
+  _PlaceholderWidgetState createState () => _PlaceholderWidgetState(this);
+
+  void onLoad(BuildContext context) => _placeholderWidget.appearOnEmpty();
+}
+
+class _PlaceholderWidgetState extends State<PlaceholderWidget>
+{
+  bool _hasMods = false;  
+
+  PlaceholderWidget widget;
+
+  _PlaceholderWidgetState(this.widget);
+
+  void appearOnEmpty()
+  {
+    setState(() async {
+         DBProvider db;
+
+         await db.getAllEntries().then(_checkEmpty);
+        });
+  }
+
+  dynamic _checkEmpty(entries) 
+  {
+    if (entries.length != 0)
+    {
+      _hasMods = false;
+    }
+    else
+    {
+      _hasMods = true;
+    }
+  }
+
+  @override
+  Widget build (BuildContext context) => Center(
+      child: Expanded(
+        child: ListView(
+          children: const <Widget>[
+            IconTheme(
+              data: IconThemeData(
+                color: Color.fromRGBO(128, 128, 128, 65)
+              ),
+              child: Icon(Icons.wallpaper)
+            ),
+            Text("We've came up empty! Try adding some mods!")
+          ],
+        )
+      ),
+    );
+  
+  @override
+  void initState()
+  {
+    super.initState();
+    widget.onLoad(context);
+  }
+}

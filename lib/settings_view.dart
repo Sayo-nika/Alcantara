@@ -18,7 +18,15 @@ class AlcantaraSettingsView extends StatelessWidget
       ),
 
       body: Center(
-        child: const Text("Work in progress!"),
+        child: Expanded(
+          child: ListView(
+            shrinkWrap: true,
+            children: const <Widget>[
+              Text("Coming soon?"),
+              Text("Maybe.")
+            ],
+          )
+        )
       )
     );
 }
