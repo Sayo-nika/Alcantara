@@ -59,7 +59,7 @@ Widget build(BuildContext context) => Scaffold (
       child: const Icon(Icons.add)
     ),
 
-    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    floatingActionButtonLocation: FloatingActionButtonLocation.endFloat
   );
 }
 
