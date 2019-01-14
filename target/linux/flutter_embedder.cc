@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
 #endif
   // Start the engine.
   auto window = flutter_desktop_embedding::CreateFlutterWindowInSnapshotMode(
-      800, 600, assets_path, icu_data_path, arguments);
+      640, 480, assets_path, icu_data_path, arguments);
   if (window == nullptr) {
     flutter_desktop_embedding::FlutterTerminate();
     return EXIT_FAILURE;
@@ -85,8 +85,7 @@ int main(int argc, char **argv) {
   // Register any native plugins.
   AddPlugin(window, std::make_unique<plugins_menubar::MenubarPlugin>());
   AddPlugin(window, std::make_unique<plugins_color_panel::ColorPanelPlugin>());
-  AddPlugin(window,
-            std::make_unique<plugins_file_chooser::FileChooserPlugin>());
+  AddPlugin(window, std::make_unique<plugins_file_chooser::FileChooserPlugin>());
 
   flutter_desktop_embedding::FlutterWindowLoop(window);
   glfwTerminate();
